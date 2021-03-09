@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <!-- <meta name="apple-mobile-web-app-capable" content="yes"> -->
+  <link id="manifest" rel="manifest" href="manifest-ios.json">
+  <title>photobooth</title>
+  <script src="navphoto/main.js"></script>
+  
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="photocss/style.css" />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style2.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"
+    integrity="sha512-rMaqGbYalDaQz0lWNF2L8DHPtf4NW+gSZomExS0LcsNyRS4Rmj21+dt97XfXCZE/E569eX72Bh//Jt1EpStgiA=="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/addons/p5.sound.min.js"
+    integrity="sha512-wM+t5MzLiNHl2fwT5rWSXr2JMeymTtixiw2lWyVk1JK/jDM4RBSFoH4J8LjucwlDdY6Mu84Kj0gPXp7rLGaDyA=="
+    crossorigin="anonymous"></script>
+
+
+  <style>
+ .z_ind{
+   z-index: 999;
+ }
+ #idnameofdiv {
+    margin-top: 3em;
+}
+
+    .photobooth {
+
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100vh;
+    }
+
+    .b1 {
+      position: absolute !important;
+      top: 40%;
+      bottom: auto;
+      right: auto; 
+      left: 42%;
+    }
+
+    .bg2 {
+      background: url(images/photobg.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-repeat: no-repeat;
+    }
+
+    .t1 {
+      position: absolute !important;
+      top: 42%;
+      bottom: auto;
+      right: auto;
+      left: 40%;
+      padding-left: 10px;
+    }
+
+    .photobutton {
+      font-size: 43px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: -7.5vh;
+      ;
+    }
+
+    .portrait-content {
+      display: none;
+    }
+
+    .backdiv {
+      margin-top: 4vh;
+      background-color: #fff;
+      width: 77%;
+      padding-bottom: 4vh;
+      margin-left: auto;
+      margin-right: auto;
+
+    }
+
+    .pop-text {
+      position: fixed;
+      color: #051551;
+      z-index: 999999;
+      background: #fff;
+      padding: 6px 20px;
+      font-size: 16px;
+      text-transform: uppercase;
+      top: 6px;
+      right: 7px;
+      opacity: 1;
+      text-shadow: none;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    .pop-text1 {
+      position: fixed;
+      color: #051551;
+      z-index: 999999;
+      background: #fff;
+      padding: 6px 20px;
+      font-size: 16px;
+      text-transform: uppercase;
+      top: 6px;
+      left: 7px;
+      opacity: 1;
+      text-shadow: none;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    @media only screen and (min-device-width: 0px) and (max-device-width: 815px) and (orientation: portrait) {
+      .portrait-content {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #fff;
+        width: 100%;
+        height: 100%;
+        height: 100vh;
+        z-index: 99999999;
+      }
+
+      #idnameofdiv {
+        display: none;
+      }
+
+      .portrait-center {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        margin: 0 auto;
+        right: 0;
+        transform: translateY(-50%);
+        text-align: center;
+      }
+
+      .portrait-center img {
+        margin: 0 auto 10px;
+        width: 200px;
+        text-align: center;
+      }
+
+      .portrait-center p {
+        font-size: 18px;
+        color: #000;
+        font-family: var(--head-font);
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 600;
+      }
+    }
+
+    /* @media (min-width: 572px) and (max-width: 992px) {
+            
+     
+        }  */
+    @media screen and (min-width: 1090px) and (max-width: 1400px) {
+      /* .photobutton {
+        margin-top: -2vh !important;
+      } */
+    }
+
+    @media (min-width: 572px) and (max-width: 768px) {
+      .t1 {
+        padding-left: 0px;
+
+      }
+      /* #idnameofdiv {
+    margin-top: 1em;
+} */
+      .photobutton {
+        font-size: 28px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -2vh;
+   
+
+      }
+
+      .backdiv {
+        width: 82%;
+
+      }
+
+      .backdiv canvas.p5Canvas {
+        width: 100% !important;
+      }
+
+      .btn2 {
+        width: 22px !important;
+      }
+
+      .btn3 {
+        width: 32px !important;
+      }
+    }
+
+    @media screen and (min-width:768px) and (max-width:992px) {
+      .t1 {
+        padding-left: 0px;
+
+      }
+      /* #idnameofdiv {
+    margin-top: 4em;
+} */
+
+      .photobutton {
+        font-size: 28px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -2vh;
+
+      }
+
+      .backdiv {
+        width: 70%;
+
+        padding-bottom: 2vh !important;
+
+
+      }
+
+      .btn2 {
+        width: 22px !important;
+      }
+
+      .btn3 {
+        width: 32px !important;
+      }
+
+      .backdiv canvas.p5Canvas {
+        width: 100% !important;
+      }
+    }
+  </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-105801748-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-105801748-1');
+  </script>
+  <script>
+    let isIOS = /(ipad|iphone|ipod|mac)/g.test(navigator.userAgent.toLowerCase());
+    //alert(isIOS);
+    let manifest = document.getElementById("manifest");
+    if (isIOS)
+      manifest.href = 'manifest-ios.json'
+  </script>
+
+</head>
+
+<body style="background-color:transparent;overflow: hidden;" class="bg2">
+
+  <div class="portrait-content">
+    <div class="portrait-center">
+      <img src="images/rotate.gif" alt="" />
+      <p>Please Rotate your device</p>
+    </div>
+  </div>
+  <div>
+    <h1 class="text-center"> photobooth </h1>
+  </div>
+ 
+  <!-- <a href="lobby.html">
+    <div class="pop-text1">
+      <span class="fa fa-arrow-left"></span>&nbsp;&nbsp;BACK</div>
+  </a>
+
+  <div class="pop-text" onclick="adduserlogout()">
+    <span class="fa fa-sign-out"></span>&nbsp;&nbsp;Signout</div> -->
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 z_ind">
+        <div class="text-center" id="photo">
+
+          <div id="idnameofdiv"></div>
+          <div class="photobutton">
+            <i class="fa fa-camera-retro btn1" style="color:#fff;    position: relative;
+             " aria-hidden="true"></i>
+            <i class="btn2 fa fa-repeat" style="color:#fff;   position: relative;
+             " aria-hidden="true"></i>
+            <!-- <img class="btn2" src="images/retry.png" alt="" width="38px" style="  position: relative;
+             "></i> -->
+            <i class="btn3 fa fa-download" style="color:#fff;   position: relative;" aria-hidden="true"></i>
+            <!-- <img class="btn3 " src="images/down.png" alt="" width="55px" style="  position: relative;
+              "></i>
+               -->
+               <!-- <div class="pop-text3">
+                <button class="fa fa-arrow-left" value="A" onclick="changefilter(this.value)" id="changebtn">1</button>&nbsp;&nbsp;</div>
+                <div class="pop-text3">
+                  <button class="fa fa-arrow-left" value="B" onclick="changefilter(this.value)" id="changebtn">2</button>&nbsp;&nbsp;</div> -->
+            
+                
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    changefilter()
+  </script>
+
+
+
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+ 
+</body>
+
+</html>

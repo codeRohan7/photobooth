@@ -1,0 +1,390 @@
+@font-face{
+    font-family: HelveticaNeue;
+    src:url(../Font/HelveticaNeue.otf);
+}
+@font-face{
+    font-family: HelveticaNeuebold;
+    src:url(../Font/HelveticaNeue\ Cond\ Mono\ Bold.ttf);
+}
+
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body {
+  overflow: hidden; /* Hide scrollbars */
+  font-family: HelveticaNeue;
+  margin: 0;
+}
+
+label{margin-left: 20px;}
+#datepicker{width:180px; margin: 0 20px 20px 20px;}
+#datepicker > span:hover{cursor: pointer;}
+#loginerror{
+    color: red;
+    
+    font-weight: normal;
+ 
+    padding-top: 0px;
+    z-index: 100;
+
+}
+.abs-row {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    text-align: center;
+}
+
+.regi-text h2 {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 30px;
+    text-shadow: 2px 3px 2px #350808;
+  
+}
+
+.regi-text p {
+    color: #ffcc47;
+    text-shadow: 2px 3px 2px #350808;
+    font-weight: normal;
+    font-size: 18px;
+    margin-top: -8px;
+}
+
+.regi-text {
+    margin-top: 11vw;
+}
+
+.regi-new h3 {
+    color: #fff;
+    font-weight: normal;
+    text-shadow: 2px 3px 2px #350808;
+}
+
+.regi-new h4 {
+    color: #ffcc47;
+    text-shadow: 2px 3px 2px #350808;
+}
+
+.regi-new {
+    margin-top: 7.9vw;
+}
+.regi-new h4 {
+    font-weight: normal;
+    font-size: 19px;
+    text-shadow: 2px 3px 2px #350808;
+}
+
+
+.logos {
+    margin-top: 34px;
+}
+
+.log-form {
+        position: absolute;
+    top: 20vh;
+    left: 0vw;
+    right: 0;
+    width: 43%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #f0f0f1;
+    border-radius: 10px;
+    z-index: 99;
+        box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+}
+.buttonlogin {
+    width: 40%;
+    margin-left: auto;
+    /* border: none; */
+    padding: 5px;
+    border: 1px solid transparent;
+    border-radius: 35px;
+    
+    color: #fff;
+    font-size: 17px;
+    margin-top: 8px;
+        background-image: linear-gradient(to right, #fa4200 , #ff7304);
+
+}
+
+.sub-btn button {
+    width: 100%;
+    border: none;
+    padding: 5px 0px 2px 0px;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 8px;
+     background-image: linear-gradient(to right, #58c0dc, #045b73);
+
+}
+
+.sub-btn button:focus {
+    outline: none;
+}
+
+.input-group input {
+    background-color: #e8e8e8;
+    
+    border-radius: 20px !important;
+    color: #212529;
+    height: 32px;
+}
+
+.input-group input::placeholder {
+  color: #aaaaaa;
+  font-size: 13px;
+  font-weight: normal;
+  font-family: arial;
+}
+
+.input-group-text {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: .375rem .75rem;
+    margin-bottom: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    text-align: center;
+    white-space: nowrap;
+    background: #271703;
+    border: 1px solid #c28633;
+    border-radius: .25rem;
+}
+
+.input-group-text i {
+    color: #c28733;
+}
+
+.logo-sec {
+    margin-top: -47px;
+}
+.hr {
+    background-image: linear-gradient(to right, #045b73,  #58c0dc);
+    height: 3px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.logos img {
+    width: 40%;
+}
+#signinerror{
+    color: red;
+}
+
+@media (max-width: 767px){
+    .sign-up h5{
+       font-size: 17px !important;
+    }
+
+}
+
+@media screen and (min-width: 572px) and (max-width: 2000px) {
+    .mobile-view {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 572px) {
+    .desktop-view {
+        display: none;
+    }
+    .mine1{
+        margin-top: 4vh;
+    }
+.log-form {
+    position: absolute;
+    top: 24vh !important;
+     padding-top: 0vh !important;
+    left: 0vw;
+    
+    right: 0;
+    padding-bottom: 9vh !important;
+    width: 320px;
+    
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #f8f9fa;
+    border-radius: 10px 10px 10px 10px;
+    z-index: 99;
+}
+
+ .live-find p {
+    color: #988c93;
+    font-size: 15px !important;
+}
+
+.regi-text h2 {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 22px;
+    margin-top: 10px;
+    text-shadow: 2px 3px 2px #350808;
+    /* font-family: HelveticaNeuebold; */
+}
+
+.regi-text p {
+    color: #ffcc47;
+    text-shadow: 2px 3px 2px #350808;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.logos img {
+    width: 100%;
+}
+
+
+ .foot-texts {
+    width: 100% !important;
+     margin-top: 65vh !important;
+ }
+
+  .foot-texts h3 {
+    font-size: 18px;
+  }
+
+
+    }
+
+
+    .logs-log {
+        margin-top: 0px; 
+    }
+
+
+    .regi-text h3  {
+        color: #fff;
+        font-weight: normal;
+        font-size: 25px;
+        text-shadow: 2px 3px 2px #350808;
+        margin-top: 30px;
+    }
+
+    .regi-text h6 {
+        color: #fff;
+        text-transform: uppercase;
+    }
+
+       .regi-text a {
+        color: #fff;
+        font-weight: bold;
+       }
+
+       .foot-texts {
+    margin-top: 60vh;
+    color: #000;
+    font-family: HelveticaNeue;
+    text-transform: uppercase;
+    width: 40%;
+    padding: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(../img/layer-1.png);
+    background-size: 100% 100%;
+       }
+
+       .foot-texts h3 {
+        position: relative;
+        top: 4px;
+       }
+
+
+.foot-texts h3 a {
+    color: red !important;
+}
+
+.checkbox label {
+    color: #988c93;
+}
+
+.sign-up p {
+    color: #988c93;
+}
+
+.sign-up i {
+    color: #1291d2;
+    font-size: 30px;
+    position: relative;
+    top: -10px;
+}
+
+.live-find p {
+    color: #988c93;
+    font-size: 20px;
+}
+
+.live-find span {
+    color: #988c93;
+    position: relative;
+    top: -12px;
+}
+
+.live-find h2 {
+    color: #e47329;
+}
+
+.live-find h3 {
+    color: #988c93;
+}
+
+.sign-up {
+    color: #988c93;
+}
+
+.mine {
+    color:#e47329;
+    font-size: 30px;
+    margin-top: 20vh; 
+    line-height: 30px;
+}
+/* .mine1 {
+    color:#e47329;
+    font-size: 25px;
+    margin-top: 10vh; 
+    line-height: 30px;
+} */
+
+#clockdiv{
+    margin-top: 20px;
+    font-family: sans-serif;
+    color: #e47329;
+    display: inline-block;
+    font-weight: 100;
+    text-align: center;
+    font-size: 30px;
+}
+
+#clockdiv > div{
+    padding: 10px;
+    border-radius: 1px;
+  
+    border-top: none;
+    border-left: none;
+    border-bottom: none;
+    display: inline-block;
+}
+
+#clockdiv div > span{
+    padding: 15px;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+.smalltext{
+    padding-top: 5px;
+    font-size: 16px;
+}
